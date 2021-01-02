@@ -8,8 +8,10 @@ function getMoneyChange(money) {
             //cek total uang pecahan untuk kembalian
             total += Number(key) * moneyStocks[key] 
             //mencari nilai uang terkecil
-            if(key == '500'){
-                minim = Number(key)
+            if(minim === 0){
+                minim = key
+            }else if(minim > key){
+                minim = key
             }
             //memasukan pecahan uang ke dalam array tampung
             tamp.push(key) 
